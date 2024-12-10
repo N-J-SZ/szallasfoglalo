@@ -37,7 +37,7 @@ export const routes: Routes = [
    * logged in routes
    */
   {
-    path: 'logout', component: LogoutComponent
+    path: 'logout', component: LogoutComponent, canActivate: [UserAuthGuard]
   },
 
   /**
@@ -58,6 +58,9 @@ export const routes: Routes = [
       },
       {
         path: 'bookings', component: ManageBookingsComponent
+      },
+      {
+        path: 'users', component: ManageBookingsComponent
       }
     ]
   },
